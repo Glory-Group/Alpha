@@ -82,6 +82,17 @@ export const constantRoutes = [
         meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
       }
     ]
+  },{
+    path:"/invite",
+    component:Layout,
+    children:[
+      {
+        path:"index",
+        component:()=>import("@/views/invite/index"),
+        name:"Invite",
+        meta:{title:'Invite',icon:"documentation",affix:true}
+      }
+    ]
   },
   {
     path: '/documentation',
