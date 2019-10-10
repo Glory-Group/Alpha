@@ -2,8 +2,9 @@
   <div class="app-container">
     <div class="top">aaaaas</div>
     <div class="bottom">
+      <!-- sss -->
       <Table
-        :columns="columns"
+        :columns="column"
         :data="data"
       />
     </div>
@@ -13,13 +14,14 @@
 <script>
 import { getTableData } from './api/index'
 import { data } from './mock/table.js'
-//import Util from '@/utils'
+import Util from '@/utils'
+//
 export default {
   name: 'Guide',
   data() {
     return {
       data: data,
-      columns: [
+      column: [
         {
           title: '姓名',
           key: 'name',
@@ -68,13 +70,13 @@ export default {
         {
           title: '执业年限',
           key: 'lengthOfPractice',
-          width: 100,
+          width: 101,
           sortable: 'custom'
         },
         {
           title: '出生日期',
           key: 'birthday',
-          width: 120,
+          width: 121,
           sortable: 'custom'
           // render: (h, params) =>
           // h("span", Util.fmtDate(params.row.birthday, "yyyy-MM-dd"))
@@ -83,14 +85,14 @@ export default {
           title: '邀请状态',
           key: 'inviteStatus',
           align: 'center',
-          minWidth: 73
+          minWidth: 74
         },
         { title: '邀请人', key: 'inviter', align: 'center', minWidth: 73 },
         {
           title: '邀请记录',
           key: 'inviteRecord',
           align: 'center',
-          minWidth: 100,
+          minWidth: 101,
           render: (h, params) => {
             return h('p', params.row.inviteRecord)
           }
@@ -116,12 +118,14 @@ export default {
           //       : ""
           //   );
           // }
+          //aaaaaa
         },
         {
           title: '近一个月的使用次数',
           key: 'monthReqTimes',
           sortable: 'custom',
           width: 150
+          ////
         },
         {
           title: 'iCourt学员',
@@ -130,6 +134,7 @@ export default {
           render: (h, params) => {
             return h('span', params.row.isIcourtStudent ? '是' : '否')
           }
+          ////
         },
         {
           title: '参加课程次数',
@@ -151,6 +156,7 @@ export default {
           render: (h, params) => {
             return h('span', params.row.isUsaStudent ? '是' : '否')
           }
+          /////
         },
         { title: '标签', key: 'tags', width: 100 },
         {
@@ -164,6 +170,7 @@ export default {
           key: 'decisionPoint',
           align: 'center',
           minWidth: 73
+          ////
         },
         {
           title: '橙子手机',
@@ -200,6 +207,7 @@ export default {
           key: 'joinActivityId',
           minWidth: 160,
           align: 'center'
+          /////
         },
         {
           title: '参加人数',
@@ -233,11 +241,13 @@ export default {
           //     }
           //   });
           // }
+          //////
         }
       ]
     }
   },
   watch: {
+    //////
     list(val) {
       if (this.selectionIds.length) {
         val.forEach(item => {
@@ -254,6 +264,7 @@ export default {
     async initData() {
       const result = await getTableData()
       console.log(result, 'result')
+      ////
     }
   }
 }
