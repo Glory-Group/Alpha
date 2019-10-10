@@ -387,4 +387,5 @@ export default {
 </script>
 <style >
     @import url("./scss/top/index.css");
+    @import url("./scss/bottom/style.css");
 </style>
