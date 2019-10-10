@@ -17,6 +17,9 @@ import './icons' // icon
 import './permission' // permission control
 import './utils/error-log' // error log
 
+import iView from 'iview';//iview
+import 'iview/dist/styles/iview.css'; 
+
 import * as filters from './filters' // global filters
 
 /**
@@ -31,6 +34,8 @@ import { mockXHR } from '../mock'
 if (process.env.NODE_ENV === 'production') {
   mockXHR()
 }
+
+Vue.use(iView)
 
 Vue.use(Element, {
   size: Cookies.get('size') || 'medium' // set element-ui default size

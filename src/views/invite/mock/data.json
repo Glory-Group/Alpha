@@ -1,0 +1,51 @@
+[
+    {
+        "lable": "姓名",
+        "type": "text",
+        "msg": "请输入姓名",
+        "val": ""
+    },
+    {
+        "lable": "所在机构",
+        "type": "text",
+        "msg": "请输入所在机构",
+        "val": ""
+    },
+    {
+        "lable": "手机号",
+        "type": "text",
+        "msg": "请输入姓名",
+        "val": ""
+    },
+    {
+        "lable": "职务",
+        "type": "select",
+        "msg": "请输入姓名",
+        "val": "",
+        "children": [
+            {
+                "lable": "主任",
+                "selected": false
+            },
+            {
+                "lable": "副主任",
+                "selected": false
+            },
+            {
+                "lable": "合伙人",
+                "selected": false
+            },
+            {
+                "lable": "执行主任",
+                "selected": false
+            }
+        ]
+    },{
+        "lable":"课程次数",
+        "type":"double",
+        "message":["最小","最大"],
+        "val":""
+    },{
+        
+    }
+]
